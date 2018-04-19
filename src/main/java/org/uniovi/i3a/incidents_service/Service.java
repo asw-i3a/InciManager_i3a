@@ -1,4 +1,4 @@
-package org.uniovi.i3a.incimanager;
+package org.uniovi.i3a.incidents_service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
