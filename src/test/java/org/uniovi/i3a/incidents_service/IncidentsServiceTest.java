@@ -21,8 +21,7 @@ public class IncidentsServiceTest {
     
     @Autowired
     private IncidentsService service;
-
-    @Test
+    
     public void saveTest() {
 	Incident incident = new Incident();
 	incident.setTitle("New incident by willy");
