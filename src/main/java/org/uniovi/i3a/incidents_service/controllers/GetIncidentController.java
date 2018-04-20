@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.uniovi.i3a.incidents_service.types.Incident;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 public class GetIncidentController extends AbstractIncidentController {
 
@@ -33,6 +36,7 @@ public class GetIncidentController extends AbstractIncidentController {
     
     @RequestMapping(value="/incidents/{id}")
     public Incident getIncident(@PathVariable("id") String id) {
+	log.info("Geting incident from service with id: " + id);
 	return service.findById(id);
     }
 }

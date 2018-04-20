@@ -20,8 +20,8 @@ public class Incident {
     @Id
     private ObjectId _id;
     
-    @JsonProperty("db_id")
-    private String dbId = "";
+    @JsonProperty("incidentId")
+    private String incidentId = "";
     private String title = "";
     private String description = "";
     private String status = "";
@@ -33,7 +33,7 @@ public class Incident {
     private String operatorId = "";
     
     
-    public String getDbId() {
+    public String getIncidentId() {
 	if(this._id == null)
 	    return "";
 	
