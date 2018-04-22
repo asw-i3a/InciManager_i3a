@@ -10,5 +10,6 @@ public interface IncidentsService {
     List<Incident> findAll();
     Incident findById(String id);
     List<Incident> findByOperatorId(String id);
+    List<Incident> findByAgentId(String id);
     List<Incident> findByStatus(String status);
 }

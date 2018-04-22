@@ -11,5 +11,6 @@ import org.uniovi.i3a.incidents_service.types.Incident;
 public interface IncidentsRepository extends MongoRepository<Incident, ObjectId> {
 
     List<Incident> findByOperatorId(String id);
+    List<Incident> findByAgentId(String id);
     List<Incident> findByStatus(String status);
 }

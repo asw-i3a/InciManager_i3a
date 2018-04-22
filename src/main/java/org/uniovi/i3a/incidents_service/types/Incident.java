@@ -30,6 +30,7 @@ public class Incident {
     private String[] multimedia = {""};
     private Map<String, String> propertyVal = new HashMap<String, String>();
     private Comment[] comments;
+    private String agentId = "";
     private String operatorId = "";
     
     

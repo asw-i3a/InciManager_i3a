@@ -16,9 +16,15 @@ import lombok.extern.slf4j.Slf4j;
 public class GetIncidentController extends AbstractIncidentController {
 
     @RequestMapping(value="/incidents")
-    public List<Incident> getIncidents(@Nullable @RequestParam("status") String status, @Nullable @RequestParam("operatorId") String operatorId) {
+    public List<Incident> getIncidents(@Nullable @RequestParam("status") String status,
+	    @Nullable @RequestParam("operatorId") String operatorId,
+	    @Nullable @RequestParam("agentId") String agentId) {
 	
 	List<Incident> result;
+	
+	if(agentId != null) {
+	    return service.findByAgentId(agentId);
+	}
 	
 	if(status == null && operatorId == null) {
 	    result = service.findAll();

@@ -49,4 +49,9 @@ public class IncidentsServiceImpl implements IncidentsService {
 	return repository.findByStatus(status);
     }
 
+    @Override
+    public List<Incident> findByAgentId(String id) {
+	return repository.findByAgentId(id);
+    }
+
 }
