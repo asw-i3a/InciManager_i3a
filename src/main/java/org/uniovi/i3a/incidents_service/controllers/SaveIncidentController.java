@@ -29,7 +29,7 @@ public class SaveIncidentController extends AbstractIncidentController {
 
 	if (incident != null) {
 	    service.saveIncident(incident);
-	    responseMap.put("response", "incident created");
+	    responseMap.put("response", "incident updated");
 	    responseMap.put("incidentId", incident.get_id().toString());
 	    responseStatus = HttpStatus.OK;
 	} else {

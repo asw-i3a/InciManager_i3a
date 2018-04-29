@@ -20,6 +20,10 @@ public class IncidentsServiceImpl implements IncidentsService {
 
     @Override
     public void saveIncident(Incident incident) {
+	// To check that we're updating an existing incident
+	if(incident.get_id()==null && incident.getIncidentId()!=null && incident.getIncidentId()!="") {
+	    incident.set_id(new ObjectId(incident.getIncidentId()));
+	}
 	log.info("Saving incidence in repository: " + incident);
 	repository.save(incident);
     }
