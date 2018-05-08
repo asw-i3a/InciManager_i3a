@@ -1,4 +1,4 @@
-# I3A Agents Service
+# I3A Incidents Service
 | | **Status** |
 |---|:----|
 | **travis ci** | [![Build Status](https://travis-ci.com/asw-i3a/incidents-service.svg?branch=master)](https://travis-ci.com/asw-i3a/incidents-service)
