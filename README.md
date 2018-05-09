@@ -3,7 +3,7 @@
 |---|:----|
 | **travis ci** | [![Build Status](https://travis-ci.com/asw-i3a/incidents-service.svg?branch=master)](https://travis-ci.com/asw-i3a/incidents-service)
 | **code coverage** | [![codecov](https://codecov.io/gh/asw-i3a/incidents-service/branch/master/graph/badge.svg)](https://codecov.io/gh/asw-i3a/incidents-service)
-| **code quality** | 
+| **code quality** | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a43047eb0e3942a3af3ef93901cdfa87)](https://www.codacy.com/app/colunga91/incidents-service?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=asw-i3a/incidents-service&amp;utm_campaign=Badge_Grade)
 | **latest build** |[![Docker Badge](https://img.shields.io/badge/docker%20image-latest-blue.svg)](https://hub.docker.com/r/incisystem/incidents_service/)
 
 **Welcome to our agents service**
