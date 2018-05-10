@@ -82,5 +82,25 @@ public class IncidentsServiceTest {
 		result = service.findById( i1.get_id().toString() );
 		assertEquals( "New description", result.getDescription() );
 	}
+	
+	@Test
+	public void findAllTest() {
+		assertNotNull( service.findAll() );
+	}
+	
+	@Test
+	public void findByOperatorIdTest() {
+		assertNotNull( service.findByOperatorId( "" ) );
+	}
+	
+	@Test
+	public void findByStatuTest() {
+		assertNotNull( service.findByStatus( "OPEN" ) );
+	}
+	
+	@Test
+	public void findByAgentIdTest() {
+		assertNotNull( service.findByAgentId( "" ) );
+	}
 
 }

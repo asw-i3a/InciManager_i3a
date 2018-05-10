@@ -171,4 +171,29 @@ public class SaveIncidentControllerTest {
 			fail();
 		}
 	}
+
+	@Test
+	public void saveNullIncidentTest() {
+		Incident incident = null;
+
+		// Object to JSON in String
+		String jsonInString = "";
+		try {
+			jsonInString = new ObjectMapper().writeValueAsString( incident );
+		} catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
+
+		MockHttpServletRequestBuilder request = post( "/save" ).session( session )
+				.contentType( MediaType.APPLICATION_JSON )
+				.content( jsonInString.getBytes() );
+		try {
+			mockMvc.perform( request ).andExpect( status().isBadRequest() )
+					.andReturn();
+		} catch (Exception e) {
+			e.printStackTrace();
+			fail();
+		}
+
+	}
 }
