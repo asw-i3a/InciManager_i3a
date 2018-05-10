@@ -6,6 +6,7 @@ import java.util.Map;
 import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,7 +25,7 @@ public class SaveIncidentController extends AbstractIncidentController {
 	 * @return a response entity with the status with the results.
 	 */
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public ResponseEntity<String> save( @RequestBody Incident incident ) {
+	public ResponseEntity<String> save( @Nullable @RequestBody Incident incident ) {
 		Map<String, String> responseMap = new HashMap<String, String>();
 		HttpStatus responseStatus;
 
